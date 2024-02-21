@@ -1,14 +1,15 @@
 {
-  "name": "my-project",
+  "name": "strapi-herbdiva.in",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
-    "build": "strapi build",
+    "build": "pnpm i && strapi build",
     "strapi": "strapi",
-    "rdeploy": "scp "
+    "rsync":"scp .env bbp:herbdiva.in/backend/.env && scp .tmp/* bbp:herbdiva.in/backend/.tmp/",
+    "rdeploy": "pnpm rsync && ssh bbp 'cd herbdiva.in/backend && git pull && pm2 restart ecosystem.config.js'"
   },
   "devDependencies": {},
   "dependencies": {
