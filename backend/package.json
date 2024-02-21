@@ -9,7 +9,7 @@
     "build": "pnpm i && strapi build",
     "strapi": "strapi",
     "rsync":"scp .env bbp:herbdiva.in/backend/.env && scp .tmp/* bbp:herbdiva.in/backend/.tmp/",
-    "rdeploy": "pnpm rsync && ssh bbp 'cd herbdiva.in/backend && git pull && pm2 restart ecosystem.config.js'"
+    "rdeploy": "pnpm rsync && ssh bbp \"source ~/.nvm/nvm.sh && cd herbdiva.in/backend && git pull && pm2 restart ecosystem.config.js\""
   },
   "devDependencies": {},
   "dependencies": {

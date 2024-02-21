@@ -5,9 +5,6 @@ module.exports = {
             name: 'herbdiva-backend',
             script: 'pnpm',
             args: 'start',
-
-            watch: true,
-
         },
     ],
 };
