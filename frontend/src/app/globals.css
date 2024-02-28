@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.the_container {
+  @apply container px-5 md:px-6 lg:px-7 mx-auto lg:max-w-[1150px]
+}
